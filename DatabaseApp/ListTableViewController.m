@@ -96,7 +96,7 @@
                                  contact.name];
     
     //set the accessory view to be a clickable button
-    myCellView.accessoryType = UITableViewCellAccessoryDetailButton;
+    myCellView.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return myCellView;
     
@@ -131,25 +131,6 @@
 }
 
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
-#pragma mark - Table view delegate
-
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -162,13 +143,13 @@
     // Push the view controller.
     //[self.navigationController pushViewController:detailViewController animated:YES];
     
-    NSLog(@"%@",
-          [NSString stringWithFormat:@"Cell %ld in Section %ld is selected",
-           (long)indexPath.row, (long)indexPath.section]);
     [self editContact:indexPath];
  
 }
 
+/*
+ * Function for navigating to AddContactView Controller for editing the contact
+ */
 - (void) editContact:(NSIndexPath *)indexPath
 {
     
@@ -188,7 +169,9 @@
     
 }
 
-
+/*
+ * Function for navigating to AddContactView Controller
+ */
 -(void) AddContact
 {
     addContactViewController = [[AddContactViewController alloc] initWithNibName:@"AddContactViewController" bundle:nil];
@@ -196,6 +179,9 @@
     [self.navigationController pushViewController:self.addContactViewController animated:YES];
 }
 
+/*
+ * Function for loading data when the user swipe the table view
+ */
 - (void)changeSorting
 {
     self.contactList = [contactDbUtil getContacts];

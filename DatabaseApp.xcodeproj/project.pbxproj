@@ -135,6 +135,7 @@
 		468EF60F1994207800DCBCE0 /* DatabaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				46D099B619C3DB1400D2C592 /* AppDelegate */,
 				468EF63E199420B400DCBCE0 /* Controller */,
 				468EF63D199420AE00DCBCE0 /* View */,
 				468EF63C199420A000DCBCE0 /* Model */,
@@ -199,12 +200,19 @@
 			children = (
 				468EF63F1994210200DCBCE0 /* ListTableViewController.h */,
 				468EF6401994210200DCBCE0 /* ListTableViewController.m */,
-				468EF6181994207800DCBCE0 /* AppDelegate.h */,
-				468EF6191994207800DCBCE0 /* AppDelegate.m */,
 				468EF644199429D700DCBCE0 /* AddContactViewController.h */,
 				468EF645199429D700DCBCE0 /* AddContactViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		46D099B619C3DB1400D2C592 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				468EF6181994207800DCBCE0 /* AppDelegate.h */,
+				468EF6191994207800DCBCE0 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
